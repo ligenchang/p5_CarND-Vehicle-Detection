@@ -19,12 +19,12 @@ The goals / steps of this project are the following:
 [image2]: ./examples/all_cars_noncars.jpg
 [image3]: ./examples/sub_sampling_123.JPG
 [image4]: ./examples/sub_sampling_123_scaled.JPG
-[image5]: ./examples/sampling rage 64.JPG
-[image6]: ./examples/Sampling rate 128.JPG
+[image5]: ./examples/sampling_rate_64.JPG
+[image6]: ./examples/Sampling_rate_128.JPG
 [image7]: ./examples/test_image.JPG
 [image8]: ./examples/test_image2.JPG
-[image9]: ./examples/heat map individual.JPG
-[image10]: ./examples/heat map consective.JPG
+[image9]: ./examples/heat_map_individual.JPG
+[image10]: ./examples/heat_map_consective.JPG
 [video1]: ./project_video.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points

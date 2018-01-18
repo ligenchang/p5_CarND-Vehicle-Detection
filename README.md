@@ -1,19 +1,21 @@
-# Vehicle Detection
-[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
-
 [//]: # (Image References)
 [image1]: ./examples/cars_noncars.jpg
 [image2]: ./examples/all_cars_noncars.jpg
-[image3]: ./examples/sub sampling 123.JPG
-[image4]: ./examples/sub sampling 123 scaled.JPG
-[image5]: ./examples/sampling rage 64.JPG
-[image6]: ./examples/Sampling rate 128.JPG
+[image3]: ./examples/sub_sampling_123.JPG
+[image4]: ./examples/sub_sampling_123_scaled.JPG
+[image5]: ./examples/sampling_rate_64.JPG
+[image6]: ./examples/Sampling_rate_128.JPG
 [image7]: ./examples/test_image.JPG
 [image8]: ./examples/test_image2.JPG
-[image9]: ./examples/heat map individual.JPG
-[image10]: ./examples/heat map consective.JPG
+[image9]: ./examples/heat_map_individual.JPG
+[image10]: ./examples/heat_map_consective.JPG
 [image10]: ./examples/color_space.JPG
 [video1]: ./project_video.mp4
+# Vehicle Detection
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+
+
+
 
 In this project, your goal is to write a software pipeline to detect vehicles in a video (start with the test_video.mp4 and later implement on full project_video.mp4), but the main output or product we want you to create is a detailed writeup of the project.  Check out the [writeup template](https://github.com/udacity/CarND-Vehicle-Detection/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup.  
 
