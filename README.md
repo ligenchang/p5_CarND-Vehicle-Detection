@@ -42,10 +42,10 @@ The I tried with HOG feature only and the recognize accuracy is 97.94%
 If I combine HOG feature, spatial feature and histogram features together, the accuracy will be reached at around 98.6%.
 
 I explored what does it looks like for different color spaces and based on that I find that the color space YCrCb keep the most of the features and still clear enough to recognize.
-![alt text][image1]
+![alt text][image11]
 
-Here is the example of HOG features with YCrCb color space and HOG parameters of `orientations=9`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`::
-![alt text][image1]
+Here is the example of HOG features with YCrCb color space and HOG parameters of orientations=9,pixels_per_cell=(8, 8) and cells_per_block=(2, 2):
+![alt text][image2]
 
 Step 2 Training with liner svc
 ---
