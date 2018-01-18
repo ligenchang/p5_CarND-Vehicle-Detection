@@ -17,8 +17,8 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 [image1]: ./examples/cars_noncars.jpg
 [image2]: ./examples/all_cars_noncars.jpg
-[image3]: ./examples/sub sampling 123.JPG
-[image4]: ./examples/sub sampling 123 scaled.JPG
+[image3]: ./examples/sub_sampling_123.JPG
+[image4]: ./examples/sub_sampling_123_scaled.JPG
 [image5]: ./examples/sampling rage 64.JPG
 [image6]: ./examples/Sampling rate 128.JPG
 [image7]: ./examples/test_image.JPG
