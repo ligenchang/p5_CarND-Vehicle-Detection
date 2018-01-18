@@ -39,7 +39,7 @@ Next I tried with spatial feature with spatial size (16 * 16) only and the accur
 
 The I tried with HOG feature only and the recognize accuracy is 97.94%
 
-If I combine HOG feature and spatial feature together, the accuracy will be reached at around 98.6%.
+If I combine HOG feature, spatial feature and histogram features together, the accuracy will be reached at around 98.6%.
 
 I explored what does it looks like for different color spaces and based on that I find that the color space YCrCb keep the most of the features and still clear enough to recognize.
 ![alt text][image11]
