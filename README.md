@@ -11,6 +11,7 @@
 [image10]: ./examples/heat_map_consective.JPG
 [image11]: ./examples/color_space.JPG
 [video1]: ./project_video.mp4
+[image20]: ./examples/test_image_6.JPG
 # Vehicle Detection
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
