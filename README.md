@@ -81,16 +81,18 @@ Step 3 Hog Sub-sampling Window Search
 ---
 I decided to use Hog Sub-sampling Window Search to find all patches in the image and do predicition because only has to extract hog features once and then can be sub-sampled to get all of its overlaying windows.
 
-Here is sample on how to do sub sampling search based on the sampling rate and search with steps defined in the code, here i used the steps as 2 with sampling rate 64 and i shows how it moves step by step.
+Here is sample on how to do sub sampling search based on the sampling rate and search with steps defined in the code, here i used the steps as 2 with sampling rate 64 and here i shows how it moves step by step.
 
 
 ![alt text][image3]
 
 ![alt text][image4]
 
-Here I show how it looks like with scaling with 2 and the sampling rate is 128:
+Here I show how it looks like with scaling with 2 and the sampling rate is 64:
 
 ![alt text][image5]
+
+This image is for sampling rate with 128: 
 
 ![alt text][image6]
 
@@ -109,10 +111,6 @@ scale = 2
         recs = recs+rec 
 ```
 
-Here is  a sample to show how different scale works:
-![alt text][image5]
-
-![alt text][image6]
 
 Step 4 Find threshold value for heatmap
 ---
