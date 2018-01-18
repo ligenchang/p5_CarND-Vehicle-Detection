@@ -33,9 +33,9 @@ Step 1, Select features
 ---
 To recognize the vehicle in the image, firstly we need to identify what features we want to estract from the image as the identification to differentiate it's a vehicle or not. 
 
-I tried with histogram as the only factor for recognizing car, the accuracy is around 50%, which means this feature doesn't help too much in recognizing car. 
+I tried with histogram as the only factor for recognizing car, the accuracy is around 52%, which means this feature doesn't help too much in recognizing car, but we better still need it as the accuracy is still more than 50%. 
 
-Next I tried with spatial feature with spatial size (16 * 16) only and the accuracy is 91.98%, which is nice and it helps.
+Next I tried with spatial feature with spatial size (16 * 16) only and the accuracy is 91.98%, which is nice and it helps us to classify image based on this feature.
 
 The I tried with HOG feature only and the recognize accuracy is 97.94%
 
@@ -44,7 +44,7 @@ If I combine HOG feature, spatial feature and histogram features together, the a
 I explored what does it looks like for different color spaces and based on that I find that the color space YCrCb keep the most of the features and still clear enough to recognize.
 ![alt text][image11]
 
-Here is the example of HOG features with YCrCb color space and HOG parameters of orientations=9,pixels_per_cell=(8, 8) and cells_per_block=(2, 2):
+Here is the example of HOG features with YCrCb color space and HOG parameters of orientations=11,pixels_per_cell=(8, 8) and cells_per_block=(2, 2):
 ![alt text][image2]
 
 Step 2 Training with liner svc
@@ -55,6 +55,9 @@ There are several options to be served as classifier like svc, liner svc, naive 
 ![alt text][image7]
 
 ![alt text][image8]
+
+Here is the predicition result for all the images in test image folder:
+![alt text][image20]
 
 Step 3 Hog Sub-sampling Window Search 
 ---
@@ -67,11 +70,11 @@ Here is sample on how to do sub sampling search based on the sampling rate and s
 
 ![alt text][image4]
 
-Here I show how it looks like with scaling with 2 and the sampling rate is 64:
+Here I show how it looks like with scaling with 1 and the sampling rate is 64:
 
 ![alt text][image5]
 
-This image is for sampling rate with 128: 
+This image is for scaling rate equal to 2: 
 
 ![alt text][image6]
 

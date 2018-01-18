@@ -25,23 +25,19 @@ The goals / steps of this project are the following:
 [image8]: ./examples/test_image2.JPG
 [image9]: ./examples/heat_map_individual.JPG
 [image10]: ./examples/heat_map_consective.JPG
+[image20]: ./examples/test_image_6.JPG
 [video1]: ./project_video.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
 ---
-### Writeup / README
-
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Vehicle-Detection/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
-
-You're reading it!
 
 ### Histogram of Oriented Gradients (HOG)
 
 #### 1. Explain how (and identify where in your code) you extracted HOG features from the training images.
 
-The code for this step is contained in the fourth code cell of the IPython notebook Vehicle.ipynb.  
+The code for this step is contained in the fifth code cell of the IPython notebook Vehicle.ipynb.
 
 I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
@@ -49,7 +45,7 @@ I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an 
 
 I then explored different color spaces and different `skimage.feature.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`). I have a function get_hog_features which can extract the hog features and also can return the hog image.
 
-Here is an example using the `YCrCb` color space and HOG parameters of `orientations=9`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
+The orientation is usually between range of 6-12 and i choosed eleven. For the pixels_per_cell value, I tried with 16, 6, 12, 20 32 etc and finally choosed 8 based on the test image's predicition result. for the cells_per_block value, i keep it as same with the value i used with the lesson which is 2*2. Here is an example using the `YCrCb` color space and HOG parameters of `orientations=11`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
 
 
 ![alt text][image2]
@@ -66,7 +62,15 @@ hog_channel = "ALL" # Can be 0, 1, 2, or "ALL"
 
 The code for this step is contained in the fourth code cell of the IPython notebook Vehicle.ipynb.  
 
-I trained a linear SVM using LinearSVC, which runs efficiently and best fit for the real time predicition like self driving car.
+I trained a linear SVM using LinearSVC, which runs efficiently and best fit for the real time predicition like self driving car. the code is as follow:
+```python
+svc = LinearSVC()
+clf=svc.fit(X_train, y_train)
+```
+
+Here is all test image (in test images folder) prediction result based on the training result.
+
+![alt text][image20]
 
 ### Hog Sub-sampling Window Search 
 
@@ -74,14 +78,14 @@ I trained a linear SVM using LinearSVC, which runs efficiently and best fit for 
 
 I decided to use Hog Sub-sampling Window Search to find all patches in the image and do predicition because only has to extract hog features once and then can be sub-sampled to get all of its overlaying windows.
 
-Here is sample on how to do sub sampling search based on the sampling rate and search with steps defined in the code, here i used the steps as 2 with sampling rate 64 and i shows how it moves step by step.
+Here is sample on how to do sub sampling search based on the sampling rate and search with steps defined in the code, here i used the steps as 2 with sampling rate 64, scaling rate 1 and i shows how it moves step by step.
 
 
 ![alt text][image3]
 
 ![alt text][image4]
 
-Here I show how it looks like with scaling with 2 and the sampling rate is 128:
+Here I show how it looks like with scaling value equal to 2
 
 ![alt text][image5]
 
@@ -89,7 +93,7 @@ Here I show how it looks like with scaling with 2 and the sampling rate is 128:
 
 #### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
-Ultimately I searched on 10 scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
+Ultimately I searched on 10 scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result. The scales value are between 1 to 2 and increase 0.1 each time. For each range, i generate a random value for that to do the scaling. For example, the first time i will generate one random value between 1 to 1.1.  Here are some example images:
 
 
 ![alt text][image7]
